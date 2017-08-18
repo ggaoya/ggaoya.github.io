@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -120,7 +120,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
@@ -483,7 +483,7 @@
   <!-- <div class="theme-info">
     主题 &mdash;
     <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-      NexT.Gemini
+      NexT.Pisces
     </a>
   </div>
   -->
@@ -779,25 +779,23 @@ function showTime(Counter) {
 		query.equalTo("url", url);
 		query.find({
 			success: function(results) {
+				console.log(results);
+				alert(results);
 				if (results.length == 0) {
-					var content = '0 ' + $(document.getElementById(url)).text();
+					var content = $(document.getElementById(url)).text() + ': 0';
 					$(document.getElementById(url)).text(content);
 					return;
 				}
-				for (var i = 0; i < results.length; i++) {
-					var object = results[i];
-					var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+					var object = results[0];
+					var content = $(document.getElementById(url)).text() + ' ' + object.get('time');
 					$(document.getElementById(url)).text(content);
-				}
 			},
 			error: function(object, error) {
 				console.log("Error: " + error.code + " " + error.message);
 			}
 		});
-
 	});
 }
-
 function addCount(Counter) {
 	var Counter = AV.Object.extend("Counter");
 	url = $(".leancloud_visitors").attr('id').trim();
@@ -812,7 +810,7 @@ function addCount(Counter) {
 				counter.increment("time");
 				counter.save(null, {
 					success: function(counter) {
-						var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+						var content = $(document.getElementById(url)).text() + ' ' + counter.get('time');
 						$(document.getElementById(url)).text(content);
 					},
 					error: function(counter, error) {
@@ -827,7 +825,7 @@ function addCount(Counter) {
 				newcounter.save(null, {
 					success: function(newcounter) {
 					    console.log("newcounter.get('time')="+newcounter.get('time'));
-						var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+						var content = $(document.getElementById(url)).text() + ' ' + newcounter.get('time');
 						$(document.getElementById(url)).text(content);
 					},
 					error: function(newcounter, error) {
@@ -848,7 +846,7 @@ $(function() {
 	} else if ($('.post-title-link').length > 1) {
 		showTime(Counter);
 	}
-}); 
+});
 </script>
   
 </body>

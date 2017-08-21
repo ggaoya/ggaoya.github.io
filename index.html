@@ -383,19 +383,20 @@
 <blockquote>
 <p>width 设置viewport宽度，为一个正整数或字符串device-width<br>height 设置viewport高度,一般设置了宽度会自动解析出高度，可以不设置<br>initial-scale 默认缩放比例，为数字，可以带小数<br>minimum-scale 允许用户最小缩放比例，可以带小数<br>maximum-scale 允许用户最大缩放比例，可以带小数</p>
 </blockquote>
-<h5 id="js动态判断"><a href="#js动态判断" class="headerlink" title="js动态判断"></a>js动态判断</h5><p><code>var phoneWidth = paresInt(window.screen.width);
-    var phoneScale = phoneWidth / 640;
-    var ua = navigator.userAgent;
-    if ( /Android (\d+\.\d+)/.test(ua) ) {
-        var version = parseFloat(RegExp.$1);
-        if ( version &gt; 2.3 ) {
-            document.write(&#39;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, minimum-scale = &#39;+phoneScale+&#39;, maximum-scale = &#39;+phoneScale+&#39;, target-densitydpi=device-dpi&quot;&gt;&#39;);
-        } else {
-            document.write(&#39;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, target-densitydpi=device-dpi&quot;&gt;&#39;);
-        }
-    } else {
-        document.write(&#39;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, user-scalable=no, target-densitydpi=device-dpi&quot;&gt;&#39;);
-    }</code></p>
+<h5 id="js动态判断"><a href="#js动态判断" class="headerlink" title="js动态判断"></a>js动态判断</h5><p>`<br>    var phoneWidth = paresInt(window.screen.width);</p>
+<pre><code>&gt; var phoneScale = phoneWidth / 640;
+&gt; var ua = navigator.userAgent;
+&gt; if ( /Android (\d+\.\d+)/.test(ua) ) {
+    &gt; var version = parseFloat(RegExp.$1);
+    &gt; if ( version &gt; 2.3 ) {
+        &gt; document.write(&apos;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, minimum-scale = &apos;+phoneScale+&apos;, maximum-scale = &apos;+phoneScale+&apos;, target-densitydpi=device-dpi&quot;&gt;&apos;);
+    &gt; } else {
+        &gt; document.write(&apos;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, target-densitydpi=device-dpi&quot;&gt;&apos;);
+    &gt; }
+&gt; } else {
+    &gt; document.write(&apos;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, user-scalable=no, target-densitydpi=device-dpi&quot;&gt;&apos;);
+&gt; }
+</code></pre><p>`</p>
 
           
         

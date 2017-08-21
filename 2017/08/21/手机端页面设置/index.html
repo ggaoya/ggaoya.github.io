@@ -103,18 +103,18 @@
 
 
 
-<meta name="description" content="html页面结构&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&amp;quot; /&amp;gt;  width 设置viewport宽度，为一个正整数或字符串device-widt">
+<meta name="description" content="html页面结构&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&amp;quot; /&amp;gt;width 设置viewport宽度，为一个正整数或字符串device-widthh">
 <meta name="keywords" content="手机端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="手机端页面设置">
 <meta property="og:url" content="http://www.itgaoya.com/2017/08/21/手机端页面设置/index.html">
 <meta property="og:site_name" content="喵喵🐱">
-<meta property="og:description" content="html页面结构&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&amp;quot; /&amp;gt;  width 设置viewport宽度，为一个正整数或字符串device-widt">
+<meta property="og:description" content="html页面结构&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&amp;quot; /&amp;gt;width 设置viewport宽度，为一个正整数或字符串device-widthh">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-21T07:12:34.000Z">
+<meta property="og:updated_time" content="2017-08-21T07:15:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手机端页面设置">
-<meta name="twitter:description" content="html页面结构&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&amp;quot; /&amp;gt;  width 设置viewport宽度，为一个正整数或字符串device-widt">
+<meta name="twitter:description" content="html页面结构&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&amp;quot; /&amp;gt;width 设置viewport宽度，为一个正整数或字符串device-widthh">
 
 
 
@@ -375,10 +375,7 @@
       
 
       
-        <h4 id="html页面结构"><a href="#html页面结构" class="headerlink" title="html页面结构"></a>html页面结构</h4><p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; /&gt;</code></p>
-<blockquote>
-<p>width 设置viewport宽度，为一个正整数或字符串device-width<br>height 设置viewport高度,一般设置了宽度会自动解析出高度，可以不设置<br>initial-scale 默认缩放比例，为数字，可以带小数<br>minimum-scale 允许用户最小缩放比例，可以带小数<br>maximum-scale 允许用户最大缩放比例，可以带小数</p>
-</blockquote>
+        <h4 id="html页面结构"><a href="#html页面结构" class="headerlink" title="html页面结构"></a>html页面结构</h4><p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; /&gt;</code><br><code>width 设置viewport宽度，为一个正整数或字符串device-width</code><br><code>height 设置viewport高度,一般设置了宽度会自动解析出高度，可以不设置</code><br><code>initial-scale 默认缩放比例，为数字，可以带小数</code><br><code>minimum-scale 允许用户最小缩放比例，可以带小数</code><br><code>maximum-scale 允许用户最大缩放比例，可以带小数</code></p>
 <a id="more"></a>
 <h4 id="js动态判"><a href="#js动态判" class="headerlink" title="js动态判"></a>js动态判</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var phoneWidth = paresInt(window.screen.width);</div><div class="line">var phoneScale = phoneWidth / 640;</div><div class="line">var ua = navigator.userAgent;</div><div class="line">if ( /Android (\d+\.\d+)/.test(ua) ) &#123;</div><div class="line">	var version = parseFloat(RegExp.$1);</div><div class="line">	if ( version &gt; 2.3 ) &#123;</div><div class="line">		document.write(&apos;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, minimum-scale = &apos;+phoneScale+&apos;, maximum-scale = &apos;+phoneScale+&apos;, target-densitydpi=device-dpi&quot;&gt;&apos;);</div><div class="line">	&#125; else &#123;</div><div class="line">		document.write(&apos;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, target-densitydpi=device-dpi&quot;&gt;&apos;);</div><div class="line">	&#125;</div><div class="line">&#125; else &#123;</div><div class="line">	document.write(&apos;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, user-scalable=no, target-densitydpi=device-dpi&quot;&gt;&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="基本meta标签"><a href="#基本meta标签" class="headerlink" title="基本meta标签"></a>基本meta标签</h4><blockquote>

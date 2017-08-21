@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="喵喵🐱">
 <meta property="og:description" content="html页面结构&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&amp;quot; /&amp;gt;  width 设置viewport宽度，为一个正整数或字符串device-widt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-21T01:49:01.000Z">
+<meta property="og:updated_time" content="2017-08-21T07:07:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手机端页面设置">
 <meta name="twitter:description" content="html页面结构&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&amp;quot; /&amp;gt;  width 设置viewport宽度，为一个正整数或字符串device-widt">
@@ -375,23 +375,53 @@
       
 
       
-        <h5 id="html页面结构"><a href="#html页面结构" class="headerlink" title="html页面结构"></a>html页面结构</h5><p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; /&gt;</code></p>
+        <h4 id="html页面结构"><a href="#html页面结构" class="headerlink" title="html页面结构"></a>html页面结构</h4><p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; /&gt;</code></p>
 <blockquote>
 <p>width 设置viewport宽度，为一个正整数或字符串device-width<br>height 设置viewport高度,一般设置了宽度会自动解析出高度，可以不设置<br>initial-scale 默认缩放比例，为数字，可以带小数<br>minimum-scale 允许用户最小缩放比例，可以带小数<br>maximum-scale 允许用户最大缩放比例，可以带小数</p>
 </blockquote>
-<h5 id="js动态判断"><a href="#js动态判断" class="headerlink" title="js动态判断"></a>js动态判断</h5><p><code>var phoneWidth = paresInt(window.screen.width);
-    var phoneScale = phoneWidth / 640;
-    var ua = navigator.userAgent;
-    if ( /Android (\d+\.\d+)/.test(ua) ) {
-        var version = parseFloat(RegExp.$1);
-        if ( version &gt; 2.3 ) {
-            document.write(&#39;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, minimum-scale = &#39;+phoneScale+&#39;, maximum-scale = &#39;+phoneScale+&#39;, target-densitydpi=device-dpi&quot;&gt;&#39;);
-        } else {
-            document.write(&#39;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, target-densitydpi=device-dpi&quot;&gt;&#39;);
-        }
-    } else {
-        document.write(&#39;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, user-scalable=no, target-densitydpi=device-dpi&quot;&gt;&#39;);
-    }</code></p>
+<h4 id="js动态判"><a href="#js动态判" class="headerlink" title="js动态判"></a>js动态判</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var phoneWidth = paresInt(window.screen.width);</div><div class="line">var phoneScale = phoneWidth / 640;</div><div class="line">var ua = navigator.userAgent;</div><div class="line">if ( /Android (\d+\.\d+)/.test(ua) ) &#123;</div><div class="line">	var version = parseFloat(RegExp.$1);</div><div class="line">	if ( version &gt; 2.3 ) &#123;</div><div class="line">		document.write(&apos;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, minimum-scale = &apos;+phoneScale+&apos;, maximum-scale = &apos;+phoneScale+&apos;, target-densitydpi=device-dpi&quot;&gt;&apos;);</div><div class="line">	&#125; else &#123;</div><div class="line">		document.write(&apos;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, target-densitydpi=device-dpi&quot;&gt;&apos;);</div><div class="line">	&#125;</div><div class="line">&#125; else &#123;</div><div class="line">	document.write(&apos;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, user-scalable=no, target-densitydpi=device-dpi&quot;&gt;&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="基本meta标签"><a href="#基本meta标签" class="headerlink" title="基本meta标签"></a>基本meta标签</h4><blockquote>
+<p>设置可缩放<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,init-scale=1,user-scalable=no,minimal-ui&quot; /&gt;</code></p>
+<p>可隐藏地址栏,仅针对IOS的Safari（注：IOS7.0版本以后，safari上已看不到效果）<br><code>&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;</code></p>
+<p>仅针对IOS的Safari的顶端状态条的样式（可选default/black/black-translucent）<br><code>&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot; /&gt;</code></p>
+<p>IOS中禁用将数字识别为电话号码/忽略android平台中对邮箱地址的识别<br><code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no, email=no&quot; /&gt;</code></p>
+<p>启用360浏览器的极速模式（webkit）<br><code>&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot; /&gt;</code></p>
+<p>避免IE使用兼容模式<br><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;</code></p>
+<p>针对手持设备优化，主要针对一些老的不识别的viewport浏览器，比如黑莓<br><code>&lt;meta name=&quot;HandheldFriendly&quot; content=&quot;true&quot; /&gt;</code></p>
+<p>微软的老式浏览器<br><code>&lt;meta name=&quot;MobileOptimized&quot; content=&quot;320&quot; /&gt;</code></p>
+<p>uc强制竖屏<br><code>&lt;meta name=&quot;screen-orientation&quot; content=&quot;portrait&quot; /&gt;</code></p>
+<p>QQ强制竖屏<br><code>&lt;meta name=&quot;x5-orientation&quot; content=&quot;portrait&quot; /&gt;</code></p>
+<p>UC强制全屏<br><code>&lt;meta name=&quot;full-screen&quot; content=&quot;yes&quot; /&gt;</code></p>
+<p>QQ强制全屏<br><code>&lt;meta name=&quot;x5-fullscreen&quot; content=&quot;true&quot; /&gt;</code></p>
+<p>UC应用模式<br><code>&lt;meta name=&quot;browsermode&quot; content=&quot;application&quot; /&gt;</code></p>
+<p>QQ应用模式<br><code>&lt;meta name=&quot;x5-page-mode&quot; content=&quot;app&quot; /&gt;</code></p>
+<p>windows phone 点击无高光<br><code>&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot; /&gt;</code></p>
+</blockquote>
+<h4 id="移动端设置字体font-family"><a href="#移动端设置字体font-family" class="headerlink" title="移动端设置字体font-family"></a>移动端设置字体font-family</h4><blockquote>
+<p>——–中午字体的英文名称<br>宋体     SimSun<br>黑体     SimHei<br>微软雅黑    Microsoft Yahei<br>微软正黑体    Microsoft JhengHei<br>新宋体        NSimSun<br>新细明体    MingLiU<br>细明体        MingLiU<br>标楷体        DFKai-SB<br>仿宋        FangSong<br>楷体        KaiTi<br>仿宋_GB2312    FangSong_GB2312<br>楷体_GB2312    KaiTI_GB2312<br>中文字体多使用宋体、雅黑，英文使用Helvetica</p>
+</blockquote>
+<p><code>body { font-famly:Microsoft Yahei,SimSun,Helvetica }</code></p>
+<h5 id="点击拨打电话"><a href="#点击拨打电话" class="headerlink" title="点击拨打电话"></a>点击拨打电话</h5><p><code>&lt;a href=&quot;tel:0452-38736472&quot;&gt;电话：0452-38736472&lt;/a&gt;</code></p>
+<blockquote>
+<h5 id="点击发送短信-winphone系统无效"><a href="#点击发送短信-winphone系统无效" class="headerlink" title="点击发送短信(winphone系统无效)"></a>点击发送短信(winphone系统无效)</h5><p><code>&lt;a href=&quot;sms:10086&quot;&gt;发送短信：10086&lt;/a&gt;</code></p>
+<h5 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a>发送邮件</h5><p>普通邮件<br><code>&lt;a href=&quot;mailto:11363318@qq.com&quot;&gt;点击发送邮件&lt;/a&gt;</code></p>
+<p>收件地址后添加?cc=开头，可添加抄送地址（Android存在兼容问题）<br><code>&lt;a href=&quot;mailto:1323234@qq.com?cc=3234da1@qq.com&quot;&gt;点击发送邮件&lt;/a&gt;</code></p>
+<p>跟着抄送地址后，写上&amp;bcc=,可添加密件抄送地址（Android存在兼容问题）<br><code>&lt;a href=&quot;mailto:3342343@qq.com?cc=fdrgf@yeah.net&amp;bcc=4253@qq.com&quot;&gt;点击我发邮件&lt;/a&gt;</code></p>
+<p>包含多个收件人、抄送、密件抄送人，用分号(;)隔开多个邮件人的地址<br><code>&lt;a href=&quot;mailto:34234@qq.com;34q5@sdf.com&quot;&gt;点击我发邮件&lt;/a&gt;</code></p>
+<p>包含主题,?subject=<br><code>&lt;a href=&quot;mailto:44523@qq.com?subject=邮件主题&quot;&gt;点击发送邮件&lt;/a&gt;</code></p>
+<p>包含内容,?body=;如内容包含文本，使用%0A给文本换行<br><code>&lt;a href=&quot;mailto:24543@qq.com?body=邮件主题%0A粉丝滚%0A换行&quot;&gt;点击发送邮件&lt;/a&gt;</code></p>
+<p>内容包含链接，含http(s)://等的文本自动转化为链接<br><code>&lt;a href=&quot;mailto:2334423@qq.com?body=http://www.baidu.com&quot;&gt;点击发送邮件&lt;/a&gt;</code></p>
+<p>内容包含图片（PC不支持）<br><code>&lt;a href=&quot;mailto:2334423@qq.com?body=http://www.baidu.com&lt;img src=&#39;image/1.jpg&#39; /&gt;&quot;&gt;点击发送邮件&lt;/a&gt;</code></p>
+<h5 id="去除链接点击出现边框"><a href="#去除链接点击出现边框" class="headerlink" title="去除链接点击出现边框"></a>去除链接点击出现边框</h5><p>用户点击链接时出现灰色半透明遮罩，可使用-webkit-tap-highlight-color：: rgba(0,0,0,0)；去掉灰色半透明遮罩</p>
+<h5 id="美化表单"><a href="#美化表单" class="headerlink" title="美化表单"></a>美化表单</h5><ul>
+<li>改变输入框默认外观<br><code>input,select { -webkit-appearance:none; appearance: none; }</code></li>
+</ul>
+<h5 id="移动端字体大小"><a href="#移动端字体大小" class="headerlink" title="移动端字体大小"></a>移动端字体大小</h5><p><code>body { font-size: 62.5%; }</code></p>
+<h5 id="实用样式"><a href="#实用样式" class="headerlink" title="实用样式"></a>实用样式</h5></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 禁止长按链接与图片弹出菜单 --&gt;</div><div class="line">a,img &#123; -webkit-touch-callout: none &#125;</div><div class="line">&lt;!-- 禁止选中文字 --&gt;</div><div class="line">html,body &#123; -webkit-user-select:none;user-select:none; &#125;</div><div class="line">&lt;!-- 改变输入框placeholder的颜色值 --&gt;</div><div class="line">input:focus::-webkit-input-placeholder &#123; /* WebKit browsers */color: #999; &#125;</div><div class="line">input:focus::-moz-placeholder &#123; /* Mozilla Firefox 4 to 18 */color: #999; &#125;</div><div class="line">input:focus::-moz-placeholder &#123; /* Mozilla Firefox 19+ */color: #999; &#125;</div><div class="line">input:focus::-ms-input-placeholder &#123; /* Internet Explorer 10+ */color: #999; &#125;</div><div class="line">&lt;!-- 去掉Android语音输入按钮 --&gt;</div><div class="line">input::-webkit-input-speech-button &#123;display: none&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<h5 id="屏幕旋转事件与样式"><a href="#屏幕旋转事件与样式" class="headerlink" title="屏幕旋转事件与样式"></a>屏幕旋转事件与样式</h5></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;!-- js处理 --&gt;</div><div class="line">function orientInit()&#123;</div><div class="line">	var orientChk = document.documentElement.clientWidth &gt;document.documentElement.clientHeight?&apos;landscape&apos;:&apos;portrait&apos;;</div><div class="line">	if(orientChk ==&apos;lapdscape&apos;)&#123;</div><div class="line">		//这里是横屏下需要执行的事件</div><div class="line">	&#125;else&#123;</div><div class="line">		//这里是竖屏下需要执行的事件</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">orientInit();</div><div class="line">window.addEventListener(&apos;onorientationchange&apos; in window?&apos;orientationchange&apos;:&apos;resize&apos;, function()&#123;</div><div class="line">	setTimeout(orientInit, 100);</div><div class="line">&#125;,false) </div><div class="line"></div><div class="line">&lt;!-- css处理 --&gt;</div><div class="line">&lt;!-- 竖屏 --&gt;</div><div class="line">@media all and (orientation:portrait)&#123;   &#125;</div><div class="line">&lt;!-- 横屏 --&gt;</div><div class="line">@media all and (orientation:landscape)&#123;   &#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -476,6 +506,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/21/手机端页面设置/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -578,7 +612,7 @@ var jiathis_config={
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -680,7 +714,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#html页面结构"><span class="nav-number">1.</span> <span class="nav-text">html页面结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#js动态判断"><span class="nav-number">2.</span> <span class="nav-text">js动态判断</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#html页面结构"><span class="nav-number">1.</span> <span class="nav-text">html页面结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js动态判"><span class="nav-number">2.</span> <span class="nav-text">js动态判</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本meta标签"><span class="nav-number">3.</span> <span class="nav-text">基本meta标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端设置字体font-family"><span class="nav-number">4.</span> <span class="nav-text">移动端设置字体font-family</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#点击拨打电话"><span class="nav-number">4.1.</span> <span class="nav-text">点击拨打电话</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#点击发送短信-winphone系统无效"><span class="nav-number">4.2.</span> <span class="nav-text">点击发送短信(winphone系统无效)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#发送邮件"><span class="nav-number">4.3.</span> <span class="nav-text">发送邮件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#去除链接点击出现边框"><span class="nav-number">4.4.</span> <span class="nav-text">去除链接点击出现边框</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#美化表单"><span class="nav-number">4.5.</span> <span class="nav-text">美化表单</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#移动端字体大小"><span class="nav-number">4.6.</span> <span class="nav-text">移动端字体大小</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实用样式"><span class="nav-number">4.7.</span> <span class="nav-text">实用样式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#屏幕旋转事件与样式"><span class="nav-number">4.8.</span> <span class="nav-text">屏幕旋转事件与样式</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -729,7 +763,7 @@ var jiathis_config={
   </div>
   -->
 
-  <span class="post-count">博客全站共294字</span>
+  <span class="post-count">博客全站共1.5k字</span>
 
   <div>
     <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>本站总访问量 <span id="busuanzi_value_site_pv"></span> 次&nbsp&nbsp&nbsp

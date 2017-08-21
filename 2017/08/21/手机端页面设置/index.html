@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="喵喵🐱">
 <meta property="og:description" content="html页面结构&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&amp;quot; /&amp;gt;  width 设置viewport宽度，为一个正整数或字符串device-widt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-21T01:38:51.000Z">
+<meta property="og:updated_time" content="2017-08-21T01:45:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手机端页面设置">
 <meta name="twitter:description" content="html页面结构&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&amp;quot; /&amp;gt;  width 设置viewport宽度，为一个正整数或字符串device-widt">
@@ -379,6 +379,19 @@
 <blockquote>
 <p>width 设置viewport宽度，为一个正整数或字符串device-width<br>height 设置viewport高度,一般设置了宽度会自动解析出高度，可以不设置<br>initial-scale 默认缩放比例，为数字，可以带小数<br>minimum-scale 允许用户最小缩放比例，可以带小数<br>maximum-scale 允许用户最大缩放比例，可以带小数</p>
 </blockquote>
+<h5 id="js动态判断"><a href="#js动态判断" class="headerlink" title="js动态判断"></a>js动态判断</h5><p><code>var phoneWidth = paresInt(window.screen.width);
+    var phoneScale = phoneWidth / 640;
+    var ua = navigator.userAgent;
+    if ( /Android (\d+\.\d+)/.test(ua) ) {
+        var version = parseFloat(RegExp.$1);
+        if ( version &gt; 2.3 ) {
+            document.write(&#39;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, minimum-scale = &#39;+phoneScale+&#39;, maximum-scale = &#39;+phoneScale+&#39;, target-densitydpi=device-dpi&quot;&gt;&#39;);
+        } else {
+            document.write(&#39;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, target-densitydpi=device-dpi&quot;&gt;&#39;);
+        }
+    } else {
+        document.write(&#39;&lt;meta name=&quot;viewport&quot; content=&quot;width=640, user-scalable=no, target-densitydpi=device-dpi&quot;&gt;&#39;);
+    }</code></p>
 
       
     </div>
@@ -667,7 +680,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#html页面结构"><span class="nav-number">1.</span> <span class="nav-text">html页面结构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#html页面结构"><span class="nav-number">1.</span> <span class="nav-text">html页面结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#js动态判断"><span class="nav-number">2.</span> <span class="nav-text">js动态判断</span></a></li></ol></div>
             
 
           </div>
@@ -716,7 +729,7 @@ var jiathis_config={
   </div>
   -->
 
-  <span class="post-count">博客全站共213字</span>
+  <span class="post-count">博客全站共294字</span>
 
   <div>
     <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>本站总访问量 <span id="busuanzi_value_site_pv"></span> 次&nbsp&nbsp&nbsp

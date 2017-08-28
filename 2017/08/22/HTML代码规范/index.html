@@ -1,188 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    
-
-    <title>
-      HTML代码规范 | 喵喵🐱 
-    </title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
-      <meta name="author" content="喵">
-    
-    
-
-    <meta name="description" content="1.代码风格1.1缩紧与换行[强制]使用4个空格作为一个缩进层级，不允许使用2个空格或tab字符1.2命名[强制]class必须单词字母全小写，单词以-分割[强制]class必须代表相应模块或部件的内容或功能，不得以样式信息命名[强制]元素id必须保证页面唯一[强制]禁止为了hook脚本，无样式信息的class解释：不允许class只用于让javascript选择某些元素，class应具有明确的">
-<meta name="keywords" content="代码优化">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HTML代码规范 | 喵喵🐱">
-<meta property="og:url" content="http://www.itgaoya.com/2017/08/22/HTML代码规范/index.html">
-<meta property="og:site_name" content="喵喵🐱">
-<meta property="og:description" content="1.代码风格1.1缩紧与换行[强制]使用4个空格作为一个缩进层级，不允许使用2个空格或tab字符1.2命名[强制]class必须单词字母全小写，单词以-分割[强制]class必须代表相应模块或部件的内容或功能，不得以样式信息命名[强制]元素id必须保证页面唯一[强制]禁止为了hook脚本，无样式信息的class解释：不允许class只用于让javascript选择某些元素，class应具有明确的">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-23T07:02:34.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML代码规范 | 喵喵🐱">
-<meta name="twitter:description" content="1.代码风格1.1缩紧与换行[强制]使用4个空格作为一个缩进层级，不允许使用2个空格或tab字符1.2命名[强制]class必须单词字母全小写，单词以-分割[强制]class必须代表相应模块或部件的内容或功能，不得以样式信息命名[强制]元素id必须保证页面唯一[强制]禁止为了hook脚本，无样式信息的class解释：不允许class只用于让javascript选择某些元素，class应具有明确的">
-    
-    
-    
-      <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
-    <link rel="stylesheet" href="/css/uno.css">
-    <link rel="stylesheet" href="/css/highlight.css">
-    <link rel="stylesheet" href="/css/archive.css">
-    <link rel="stylesheet" href="/css/china-social-icon.css">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="个人学习心得。">
+    <meta name="keywords" content="前端开发个人博" />
+    <meta name="author" content="Ckryo">
+    <link rel="icon" href="/favicon.ico">
+    <!-- page title -->
+    <title>我的技术栈</title>
+    <!-- bootstrap css -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <!-- css -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/magnific-popup.css" rel="stylesheet">
+    <!-- fonts -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='/fonts/FontAwesome.otf' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/linear-icons.css">
+    <link rel="stylesheet" href="/css/share.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <!-- javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.easing.min.js"></script>
 </head>
-<body>
-
-    <span class="mobile btn-mobile-menu">
-        <i class="icon icon-list btn-mobile-menu__icon"></i>
-        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
-    </span>
-
-    
-
-<header class="panel-cover panel-cover--collapsed">
-
-
-  <div class="panel-main">
-
-  
-    <div class="panel-main__inner panel-inverted">
-    <div class="panel-main__content">
-
-        
-
-        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">喵喵🐱</a></h1>
-        <hr class="panel-cover__divider" />
-
-        
-        <p class="panel-cover__description">
-          Stay Hungry, Stay Foolish
-        </p>
-        <hr class="panel-cover__divider panel-cover__divider--secondary" />
-        
-
-        <div class="navigation-wrapper">
-
-          <nav class="cover-navigation cover-navigation--primary">
-            <ul class="navigation">
-
-              
+<body data-spy="scroll" data-target="#post-scroll-spy">
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="spinner spinner-round"></div>
+    </div>
+    <!-- / preloader -->
+    <!-- header -->
+    <header>
+        <!-- nav -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-logo" href="/index.html">
+                        gaoya
+                    </a>
+                </div>
+                <!-- / navbar-header -->
                 
-                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
-              
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    	
+                        <li>
+	                        <a href="/">
+	                        	
+	                        		<i class="fa fa-"></i>
+	                        	
+	                        	<span>首页</span>
+	                        </a>
+                        </li>
+                        
+                        <li>
+	                        <a href="/project/index.html">
+	                        	
+	                        		<i class="fa fa-"></i>
+	                        	
+	                        	<span>项目</span>
+	                        </a>
+                        </li>
+                        
+                        <li>
+	                        <a href="/post/index.html">
+	                        	
+	                        		<i class="fa fa-"></i>
+	                        	
+	                        	<span>文章</span>
+	                        </a>
+                        </li>
+                        
+                        <li>
+	                        <a href="/about.html">
+	                        	
+	                        		<i class="fa fa-"></i>
+	                        	
+	                        	<span>关于我</span>
+	                        </a>
+                        </li>
+                        
+                        <li>
+	                        <a href="/project/2016/04/28/hexo-minimal.html">
+	                        	
+	                        		<i class="fa fa-tachometer"></i>
+	                        	
+	                        	<span>Minimal</span>
+	                        </a>
+                        </li>
+                        
+                    </ul>
+                </div>
                 
-                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
-              
-                
-                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
-              
-
-            </ul>
-          </nav>
-
-          <!-- ----------------------------
-To add a new social icon simply duplicate one of the list items from below
-and change the class in the <i> tag to match the desired social network
-and then add your link to the <a>. Here is a full list of social network
-classes that you can use:
-
-    icon-social-500px
-    icon-social-behance
-    icon-social-delicious
-    icon-social-designer-news
-    icon-social-deviant-art
-    icon-social-digg
-    icon-social-dribbble
-    icon-social-facebook
-    icon-social-flickr
-    icon-social-forrst
-    icon-social-foursquare
-    icon-social-github
-    icon-social-google-plus
-    icon-social-hi5
-    icon-social-instagram
-    icon-social-lastfm
-    icon-social-linkedin
-    icon-social-medium
-    icon-social-myspace
-    icon-social-path
-    icon-social-pinterest
-    icon-social-rdio
-    icon-social-reddit
-    icon-social-skype
-    icon-social-spotify
-    icon-social-stack-overflow
-    icon-social-steam
-    icon-social-stumbleupon
-    icon-social-treehouse
-    icon-social-tumblr
-    icon-social-twitter
-    icon-social-vimeo
-    icon-social-xbox
-    icon-social-yelp
-    icon-social-youtube
-    icon-social-zerply
-    icon-mail
-
--------------------------------->
-
-<!-- add social info here -->
-
-
-
+                <!--/ nav-collapse -->
+            <!-- / container -->
+        </nav>
+        <!-- / nav -->
+        <!-- header-banner -->
+        <div id="header-banner" class="demo-1"  style="background-image: url(/images/banner-bg.jpg)" >
+    <div class="banner-content text-center">
+        <div class="banner-info">
+            <h1 id="banner-title">银河街角</h1>
+            <p id="banner-description" style="display: none" data-in-effect="rotateInUpRight">
+                优秀技术资源分享
+            </p>
         </div>
-
-      </div>
-
+        <!-- / banner-info -->
     </div>
-
-    <div class="panel-cover--overlay"></div>
-  </div>
-</header>
-
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner entry">
-            
-
-<article class="post-container post-container--single">
-
-  <header class="post-header">
-    
-    <h1 class="post-title">HTML代码规范</h1>
-
-    
-
-    <div class="post-meta">
-      <time datetime="2017-08-22" class="post-meta__date date">2017-08-22</time> 
-
-      <span class="post-meta__tags tags">
-
-          
-
-          
-             &#8226; 标签:
-            <font class="tags">
-              <a class="tags-link" href="/tags/代码优化/">代码优化</a>
-            </font>
-          
-
-      </span>
-    </div>
-    
-    
-
-  </header>
-
-  <section id="post-content" class="article-content post">
-    <blockquote>
+    <!-- / banner-content -->
+</div>
+        <!-- / header-banner -->
+    </header>
+    <!-- / header -->
+    <!-- / content -->
+    <link rel="stylesheet" href="/css/i_slidebar.css">
+<link rel="stylesheet" href="/css/i_post.css">
+<div id="page-content" class="container">
+    <!-- post content + sidebar -->
+    <section id="blog">
+        <div class="row">
+            <!-- post content area -->
+            <div class="col-md-9">
+                <div class="blog block post-content-area">
+                    <img src="/images/post_preview_default.jpg" alt="">
+                    <div class="post-info-box">
+                        <h1 style="font-size: 48px;">HTML代码规范</h1>
+                        <p class="post-info" style="margin-bottom: 15px;">
+                            发表于:
+                            <span style="color: #aaa; margin: 0 15px">
+                                2017.08.22
+                            </span>
+                             | 分类：
+                             <a href="#" style="margin: 0 5px">
+                                
+                                    -
+                                
+                             </a>
+                             
+                        </p>
+                        <blockquote>
 <h5 id="1-代码风格"><a href="#1-代码风格" class="headerlink" title="1.代码风格"></a>1.代码风格</h5><h5 id="1-1缩紧与换行"><a href="#1-1缩紧与换行" class="headerlink" title="1.1缩紧与换行"></a>1.1缩紧与换行</h5><h6 id="强制-使用4个空格作为一个缩进层级，不允许使用2个空格或tab字符"><a href="#强制-使用4个空格作为一个缩进层级，不允许使用2个空格或tab字符" class="headerlink" title="[强制]使用4个空格作为一个缩进层级，不允许使用2个空格或tab字符"></a>[强制]使用4个空格作为一个缩进层级，不允许使用2个空格或tab字符</h6><h5 id="1-2命名"><a href="#1-2命名" class="headerlink" title="1.2命名"></a>1.2命名</h5><h6 id="强制-class必须单词字母全小写，单词以-分割"><a href="#强制-class必须单词字母全小写，单词以-分割" class="headerlink" title="[强制]class必须单词字母全小写，单词以-分割"></a>[强制]class必须单词字母全小写，单词以-分割</h6><h6 id="强制-class必须代表相应模块或部件的内容或功能，不得以样式信息命名"><a href="#强制-class必须代表相应模块或部件的内容或功能，不得以样式信息命名" class="headerlink" title="[强制]class必须代表相应模块或部件的内容或功能，不得以样式信息命名"></a>[强制]class必须代表相应模块或部件的内容或功能，不得以样式信息命名</h6><h6 id="强制-元素id必须保证页面唯一"><a href="#强制-元素id必须保证页面唯一" class="headerlink" title="[强制]元素id必须保证页面唯一"></a>[强制]元素id必须保证页面唯一</h6><h6 id="强制-禁止为了hook脚本，无样式信息的class"><a href="#强制-禁止为了hook脚本，无样式信息的class" class="headerlink" title="[强制]禁止为了hook脚本，无样式信息的class"></a>[强制]禁止为了hook脚本，无样式信息的class</h6><p>解释：不允许class只用于让javascript选择某些元素，class应具有明确的语意和样式，否则容易导致css class泛滥</p>
 <a id="more"></a>
 <h6 id="强制-同一页面应避免使用相同的name与id"><a href="#强制-同一页面应避免使用相同的name与id" class="headerlink" title="[强制]同一页面应避免使用相同的name与id"></a>[强制]同一页面应避免使用相同的name与id</h6><p>解释：IE浏览器会混淆元素的id与name属性，document.getElementById可能获得到不期望的元素值</p>
@@ -196,63 +168,283 @@ classes that you can use:
 <h6 id="建议-在html标签上设置正确的lang属性"><a href="#建议-在html标签上设置正确的lang属性" class="headerlink" title="[建议]在html标签上设置正确的lang属性"></a>[建议]在html标签上设置正确的lang属性</h6><p><code>&lt;html lang=&quot;zh-CN&quot;&gt;</code></p>
 <h5 id="2-2编码"><a href="#2-2编码" class="headerlink" title="2.2编码"></a>2.2编码</h5><h6 id="强制-页面必须使用精简形式，明确指定字符编码，指定的字符编码必须是head的第一个直接子元素"><a href="#强制-页面必须使用精简形式，明确指定字符编码，指定的字符编码必须是head的第一个直接子元素" class="headerlink" title="[强制]页面必须使用精简形式，明确指定字符编码，指定的字符编码必须是head的第一个直接子元素"></a>[强制]页面必须使用精简形式，明确指定字符编码，指定的字符编码必须是head的第一个直接子元素</h6><h5 id="2-3title"><a href="#2-3title" class="headerlink" title="2.3title"></a>2.3title</h5><h6 id="强制-页面必须包含title标签声明标题"><a href="#强制-页面必须包含title标签声明标题" class="headerlink" title="[强制]页面必须包含title标签声明标题"></a>[强制]页面必须包含title标签声明标题</h6><h6 id="强制-title必须作为head的直接子元素，并紧随charset-声明之后"><a href="#强制-title必须作为head的直接子元素，并紧随charset-声明之后" class="headerlink" title="[强制]title必须作为head的直接子元素，并紧随charset 声明之后"></a>[强制]title必须作为head的直接子元素，并紧随charset 声明之后</h6><h5 id="2-4favicon"><a href="#2-4favicon" class="headerlink" title="2.4favicon"></a>2.4favicon</h5><h6 id="强制-保证favicon可访问"><a href="#强制-保证favicon可访问" class="headerlink" title="[强制]保证favicon可访问"></a>[强制]保证favicon可访问</h6><h5 id="2-5css和javascript引入"><a href="#2-5css和javascript引入" class="headerlink" title="2.5css和javascript引入"></a>2.5css和javascript引入</h5><h6 id="强制-引入css时必须指明rel-”styleheet”"><a href="#强制-引入css时必须指明rel-”styleheet”" class="headerlink" title="[强制]引入css时必须指明rel=”styleheet”"></a>[强制]引入css时必须指明rel=”styleheet”</h6><h6 id="建议-引入css和javascript时无需指明type属性"><a href="#建议-引入css和javascript时无需指明type属性" class="headerlink" title="[建议]引入css和javascript时无需指明type属性"></a>[建议]引入css和javascript时无需指明type属性</h6><h6 id="建议-在head中引入页面需要的所有css资源"><a href="#建议-在head中引入页面需要的所有css资源" class="headerlink" title="[建议]在head中引入页面需要的所有css资源"></a>[建议]在head中引入页面需要的所有css资源</h6><h6 id="建议-javascript应当放在页面末尾，或采取异步加载"><a href="#建议-javascript应当放在页面末尾，或采取异步加载" class="headerlink" title="[建议]javascript应当放在页面末尾，或采取异步加载"></a>[建议]javascript应当放在页面末尾，或采取异步加载</h6><h5 id="2-6viewport"><a href="#2-6viewport" class="headerlink" title="2.6viewport"></a>2.6viewport</h5><h6 id="建议-若页面欲对移动设备友好，需指定页面的viewport"><a href="#建议-若页面欲对移动设备友好，需指定页面的viewport" class="headerlink" title="[建议]若页面欲对移动设备友好，需指定页面的viewport"></a>[建议]若页面欲对移动设备友好，需指定页面的viewport</h6><h5 id="2-7IE-Style-Fixed"><a href="#2-7IE-Style-Fixed" class="headerlink" title="2.7IE Style Fixed"></a>2.7IE Style Fixed</h5><h6 id="建议-为兼容IE9及以下浏览器-有必要在head中使用css-if-IE条件注释"><a href="#建议-为兼容IE9及以下浏览器-有必要在head中使用css-if-IE条件注释" class="headerlink" title="[建议]为兼容IE9及以下浏览器,有必要在head中使用css if IE条件注释"></a>[建议]为兼容IE9及以下浏览器,有必要在head中使用css if IE条件注释</h6><h5 id="3-图片"><a href="#3-图片" class="headerlink" title="3.图片"></a>3.图片</h5><h6 id="强制-禁止img的src取值为空。延迟加载的图片也要设置默认的src"><a href="#强制-禁止img的src取值为空。延迟加载的图片也要设置默认的src" class="headerlink" title="[强制]禁止img的src取值为空。延迟加载的图片也要设置默认的src"></a>[强制]禁止img的src取值为空。延迟加载的图片也要设置默认的src</h6><h6 id="建议-避免为img添加不必要的title属性"><a href="#建议-避免为img添加不必要的title属性" class="headerlink" title="[建议]避免为img添加不必要的title属性"></a>[建议]避免为img添加不必要的title属性</h6><h6 id="建议-为重要的图片添加alt属性"><a href="#建议-为重要的图片添加alt属性" class="headerlink" title="[建议]为重要的图片添加alt属性"></a>[建议]为重要的图片添加alt属性</h6><h6 id="建议-添加width和height属性，以避免页面抖动"><a href="#建议-添加width和height属性，以避免页面抖动" class="headerlink" title="[建议]添加width和height属性，以避免页面抖动"></a>[建议]添加width和height属性，以避免页面抖动</h6><h6 id="建议-有下载需求的图片采用img标签实现，无需下载的图片采用css背景图实现"><a href="#建议-有下载需求的图片采用img标签实现，无需下载的图片采用css背景图实现" class="headerlink" title="[建议]有下载需求的图片采用img标签实现，无需下载的图片采用css背景图实现"></a>[建议]有下载需求的图片采用img标签实现，无需下载的图片采用css背景图实现</h6><h5 id="4-表单"><a href="#4-表单" class="headerlink" title="4.表单"></a>4.表单</h5><h5 id="4-1控件标题"><a href="#4-1控件标题" class="headerlink" title="4.1控件标题"></a>4.1控件标题</h5><h6 id="强制-有文本标题的控件必须使用label标签将其与其标题相关联"><a href="#强制-有文本标题的控件必须使用label标签将其与其标题相关联" class="headerlink" title="[强制]有文本标题的控件必须使用label标签将其与其标题相关联"></a>[强制]有文本标题的控件必须使用label标签将其与其标题相关联</h6><h5 id="4-2按钮"><a href="#4-2按钮" class="headerlink" title="4.2按钮"></a>4.2按钮</h5><h6 id="强制-使用button元素时必须指明type属性值"><a href="#强制-使用button元素时必须指明type属性值" class="headerlink" title="[强制]使用button元素时必须指明type属性值"></a>[强制]使用button元素时必须指明type属性值</h6><h6 id="建议-尽量不要使用按钮元素的name属性"><a href="#建议-尽量不要使用按钮元素的name属性" class="headerlink" title="[建议]尽量不要使用按钮元素的name属性"></a>[建议]尽量不要使用按钮元素的name属性</h6><h5 id="4-3可访问性"><a href="#4-3可访问性" class="headerlink" title="4.3可访问性"></a>4.3可访问性</h5><h6 id="建议-负责主要功能的按钮在DOM中的顺序应靠前"><a href="#建议-负责主要功能的按钮在DOM中的顺序应靠前" class="headerlink" title="[建议]负责主要功能的按钮在DOM中的顺序应靠前"></a>[建议]负责主要功能的按钮在DOM中的顺序应靠前</h6><h6 id="建议-当使用javascript进行表单提交时，如果条件允许，应使原生提交功能正常工作"><a href="#建议-当使用javascript进行表单提交时，如果条件允许，应使原生提交功能正常工作" class="headerlink" title="[建议]当使用javascript进行表单提交时，如果条件允许，应使原生提交功能正常工作"></a>[建议]当使用javascript进行表单提交时，如果条件允许，应使原生提交功能正常工作</h6><h6 id="建议-在针对移动设备开发的页面时，根据内容类型指定输入框的type属性"><a href="#建议-在针对移动设备开发的页面时，根据内容类型指定输入框的type属性" class="headerlink" title="[建议]在针对移动设备开发的页面时，根据内容类型指定输入框的type属性"></a>[建议]在针对移动设备开发的页面时，根据内容类型指定输入框的type属性</h6><h5 id="5-多媒体"><a href="#5-多媒体" class="headerlink" title="5.多媒体"></a>5.多媒体</h5><h6 id="建议-当在现代浏览器中使用audio以及video标签来播放音频视频时，应当注意格式"><a href="#建议-当在现代浏览器中使用audio以及video标签来播放音频视频时，应当注意格式" class="headerlink" title="[建议]当在现代浏览器中使用audio以及video标签来播放音频视频时，应当注意格式"></a>[建议]当在现代浏览器中使用audio以及video标签来播放音频视频时，应当注意格式</h6><h6 id="建议-在支持HTML5的浏览器中优先使用audio和video标签来定义音频视频元素"><a href="#建议-在支持HTML5的浏览器中优先使用audio和video标签来定义音频视频元素" class="headerlink" title="[建议]在支持HTML5的浏览器中优先使用audio和video标签来定义音频视频元素"></a>[建议]在支持HTML5的浏览器中优先使用audio和video标签来定义音频视频元素</h6><h6 id="建议-只有在必要的时候开启音视频的自动播放"><a href="#建议-只有在必要的时候开启音视频的自动播放" class="headerlink" title="[建议]只有在必要的时候开启音视频的自动播放"></a>[建议]只有在必要的时候开启音视频的自动播放</h6><h6 id="建议-在object标签内部提供指示浏览器不支持该标签的说明"><a href="#建议-在object标签内部提供指示浏览器不支持该标签的说明" class="headerlink" title="[建议]在object标签内部提供指示浏览器不支持该标签的说明"></a>[建议]在object标签内部提供指示浏览器不支持该标签的说明</h6><h5 id="6-模版中的HTML"><a href="#6-模版中的HTML" class="headerlink" title="6.模版中的HTML"></a>6.模版中的HTML</h5><h6 id="建议-模版代码的缩进优先保证HTML代码的缩进规则"><a href="#建议-模版代码的缩进优先保证HTML代码的缩进规则" class="headerlink" title="[建议]模版代码的缩进优先保证HTML代码的缩进规则"></a>[建议]模版代码的缩进优先保证HTML代码的缩进规则</h6><h6 id="建议-模版代码应以保证HTML单个标签语法的正确性为基本原则"><a href="#建议-模版代码应以保证HTML单个标签语法的正确性为基本原则" class="headerlink" title="[建议]模版代码应以保证HTML单个标签语法的正确性为基本原则"></a>[建议]模版代码应以保证HTML单个标签语法的正确性为基本原则</h6></blockquote>
 
-  </section>
+                    </div>
+                    <!-- / post-info-box -->
+                </div>
+                <!-- / blog-block -->
+                
+<div id="comment">
+    <!--PC和WAP自适应版-->
+    <div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>
+    <script type="text/javascript">
+    (function() {
+        var appid = 'cytbAqy98';
+        var conf = 'prod_ea59e8a942c2c4c0e72b24ed00ecddc9';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+        } else {
+            var loadJs = function(d, a) {
+                var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+                var b = document.createElement("script");
+                b.setAttribute("type", "text/javascript");
+                b.setAttribute("charset", "UTF-8");
+                b.setAttribute("src", d);
+                if (typeof a === "function") {
+                    if (window.attachEvent) {
+                        b.onreadystatechange = function() {
+                            var e = b.readyState;
+                            if (e === "loaded" || e === "complete") {
+                                b.onreadystatechange = null;
+                                a();
+                            }
+                        }
+                    } else {
+                        b.onload = a;
+                    }
+                }
+                c.appendChild(b)
+            };
+            loadJs("http://changyan.sohu.com/upload/changyan.js", function() {
+                window.changyan.api.config({
+                    appid: appid,
+                    conf: conf
+                })
+            });
+        }
+    })();
+    </script>
+</div>
+<!-- / comments -->
 
-  <section class="post-comments">
 
-    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
-    
-</section>
+            </div>
+            <!-- / col-md-9 -->
+            <!-- / post content area -->
+            <style type="text/css">
+.post-tab-header {
+    width: 100%;
+    padding: 5px 50px;
+    height: 40px;
+    margin-bottom: 10px;
+}
 
+.post-tab-header li {
+    width: 50%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
 
-</article>
+.post-tab-header li.active {
+    color: #c39d6d;
+    border-bottom: 1px solid #c39d6d;
+}
 
+.post-tab-content .post-tab-item {
+    display: none;
+}
 
-            <footer class="footer">
+.post-tab-content .post-tab-item.active {
+    display: block;
+}
 
-    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
-    
-</footer>
+@keyframes MinefadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(45px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.MinefadeInUp {
+    animation-name: MinefadeInUp;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+.post-toc {
+    font-size: 14px;
+    color: #666;
+    overflow: auto;
+}
+
+.post-toc .nav-link {
+    padding: 0px;
+}
+
+.post-toc ol {
+    margin: 0;
+    padding: 5px 0 5px 20px;
+    text-align: left;
+    list-style: none;
+    font-size: 14px;
+}
+
+.post-toc ol>ol {
+    padding-left: 0;
+}
+
+.post-toc ol a {
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;
+    color: #666;
+    border-bottom-color: #ccc;
+}
+
+.post-toc ol a:hover {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+.post-toc .nav-item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.8;
+}
+
+.post-toc .nav .nav-child {
+    display: none;
+}
+
+.post-toc .nav .active>.nav-child {
+    display: block;
+}
+
+.post-toc .nav .active-current>.nav-child {
+    display: block;
+}
+
+.post-toc .nav .active-current>.nav-child>.nav-item {
+    display: block;
+}
+
+.post-toc .nav .active>a {
+    color: #c39d6d;
+    border-bottom-color: #c39d6d;
+}
+
+.post-toc .nav .active-current>a {
+    color: #c39d6d;
+}
+
+.post-toc .nav .active-current>a:hover {
+    color: #c39d6d;
+}
+</style>
+<!-- post sidebar area -->
+<div class="col-md-3">
+    <div class="blog-sidebar" data-spy="affix" data-offset-top="627">
+        <ul class="post-tab-header">
+            <li class="active" data-index="0">文章目录</li>
+            <li data-index="1">站点概览</li>
+        </ul>
+        <div style="clear: both"></div>
+        <div class="post-tab-content">
+            <div id="post-scroll-spy" data-index="0" class="active post-tab-item animated MinefadeInUp">
+                <div class="post-toc">
+                    <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-代码风格"><span class="nav-number">1.</span> <span class="nav-text">1.代码风格</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1缩紧与换行"><span class="nav-number">2.</span> <span class="nav-text">1.1缩紧与换行</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-使用4个空格作为一个缩进层级，不允许使用2个空格或tab字符"><span class="nav-number">2.1.</span> <span class="nav-text">[强制]使用4个空格作为一个缩进层级，不允许使用2个空格或tab字符</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2命名"><span class="nav-number">3.</span> <span class="nav-text">1.2命名</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-class必须单词字母全小写，单词以-分割"><span class="nav-number">3.1.</span> <span class="nav-text">[强制]class必须单词字母全小写，单词以-分割</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-class必须代表相应模块或部件的内容或功能，不得以样式信息命名"><span class="nav-number">3.2.</span> <span class="nav-text">[强制]class必须代表相应模块或部件的内容或功能，不得以样式信息命名</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-元素id必须保证页面唯一"><span class="nav-number">3.3.</span> <span class="nav-text">[强制]元素id必须保证页面唯一</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-禁止为了hook脚本，无样式信息的class"><span class="nav-number">3.4.</span> <span class="nav-text">[强制]禁止为了hook脚本，无样式信息的class</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-同一页面应避免使用相同的name与id"><span class="nav-number">3.5.</span> <span class="nav-text">[强制]同一页面应避免使用相同的name与id</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-id单词全字母小写，单词以-分隔，同项目必须保持风格一致"><span class="nav-number">3.6.</span> <span class="nav-text">[建议]id单词全字母小写，单词以_分隔，同项目必须保持风格一致</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-id、class命名，在避免冲突并描述清楚的前提下尽可能缩短"><span class="nav-number">3.7.</span> <span class="nav-text">[建议]id、class命名，在避免冲突并描述清楚的前提下尽可能缩短</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3标签"><span class="nav-number">4.</span> <span class="nav-text">1.3标签</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-标签名必须小写"><span class="nav-number">4.1.</span> <span class="nav-text">[强制]标签名必须小写</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-对于无需自闭合标签，禁止强制自闭合"><span class="nav-number">4.2.</span> <span class="nav-text">[强制]对于无需自闭合标签，禁止强制自闭合</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-在css可以实现相同需求的情况下不可使用表格进行布局"><span class="nav-number">4.3.</span> <span class="nav-text">[建议]在css可以实现相同需求的情况下不可使用表格进行布局</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-标签的使用尽量简洁化，减少不必要的嵌套"><span class="nav-number">4.4.</span> <span class="nav-text">[建议]标签的使用尽量简洁化，减少不必要的嵌套</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-4属性"><span class="nav-number">5.</span> <span class="nav-text">1.4属性</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-属性名必须使用小写字母，自定义属性视情况而定"><span class="nav-number">5.1.</span> <span class="nav-text">[强制]属性名必须使用小写字母，自定义属性视情况而定</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-属性值必须使用双引号包围，自定义属性视情况而定"><span class="nav-number">5.2.</span> <span class="nav-text">[强制]属性值必须使用双引号包围，自定义属性视情况而定</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-布尔类型的属性，建议不添加属性值"><span class="nav-number">5.3.</span> <span class="nav-text">[建议]布尔类型的属性，建议不添加属性值</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-自定义属性建议以XXX-为前缀，推荐使用data"><span class="nav-number">5.4.</span> <span class="nav-text">[建议]自定义属性建议以XXX-为前缀，推荐使用data-</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Head"><span class="nav-number">6.</span> <span class="nav-text">2.Head</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-DOCTYPE"><span class="nav-number">7.</span> <span class="nav-text">2.1 DOCTYPE</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-使用HTML5的doctype来启用标准模式，建议使用大写的DOCTYPE"><span class="nav-number">7.1.</span> <span class="nav-text">[强制]使用HTML5的doctype来启用标准模式，建议使用大写的DOCTYPE</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-启用IE-Edge模式"><span class="nav-number">7.2.</span> <span class="nav-text">[建议]启用IE Edge模式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-在html标签上设置正确的lang属性"><span class="nav-number">7.3.</span> <span class="nav-text">[建议]在html标签上设置正确的lang属性</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2编码"><span class="nav-number">8.</span> <span class="nav-text">2.2编码</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-页面必须使用精简形式，明确指定字符编码，指定的字符编码必须是head的第一个直接子元素"><span class="nav-number">8.1.</span> <span class="nav-text">[强制]页面必须使用精简形式，明确指定字符编码，指定的字符编码必须是head的第一个直接子元素</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3title"><span class="nav-number">9.</span> <span class="nav-text">2.3title</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-页面必须包含title标签声明标题"><span class="nav-number">9.1.</span> <span class="nav-text">[强制]页面必须包含title标签声明标题</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-title必须作为head的直接子元素，并紧随charset-声明之后"><span class="nav-number">9.2.</span> <span class="nav-text">[强制]title必须作为head的直接子元素，并紧随charset 声明之后</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4favicon"><span class="nav-number">10.</span> <span class="nav-text">2.4favicon</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-保证favicon可访问"><span class="nav-number">10.1.</span> <span class="nav-text">[强制]保证favicon可访问</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-5css和javascript引入"><span class="nav-number">11.</span> <span class="nav-text">2.5css和javascript引入</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-引入css时必须指明rel-”styleheet”"><span class="nav-number">11.1.</span> <span class="nav-text">[强制]引入css时必须指明rel=”styleheet”</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-引入css和javascript时无需指明type属性"><span class="nav-number">11.2.</span> <span class="nav-text">[建议]引入css和javascript时无需指明type属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-在head中引入页面需要的所有css资源"><span class="nav-number">11.3.</span> <span class="nav-text">[建议]在head中引入页面需要的所有css资源</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-javascript应当放在页面末尾，或采取异步加载"><span class="nav-number">11.4.</span> <span class="nav-text">[建议]javascript应当放在页面末尾，或采取异步加载</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-6viewport"><span class="nav-number">12.</span> <span class="nav-text">2.6viewport</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-若页面欲对移动设备友好，需指定页面的viewport"><span class="nav-number">12.1.</span> <span class="nav-text">[建议]若页面欲对移动设备友好，需指定页面的viewport</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-7IE-Style-Fixed"><span class="nav-number">13.</span> <span class="nav-text">2.7IE Style Fixed</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-为兼容IE9及以下浏览器-有必要在head中使用css-if-IE条件注释"><span class="nav-number">13.1.</span> <span class="nav-text">[建议]为兼容IE9及以下浏览器,有必要在head中使用css if IE条件注释</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-图片"><span class="nav-number">14.</span> <span class="nav-text">3.图片</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-禁止img的src取值为空。延迟加载的图片也要设置默认的src"><span class="nav-number">14.1.</span> <span class="nav-text">[强制]禁止img的src取值为空。延迟加载的图片也要设置默认的src</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-避免为img添加不必要的title属性"><span class="nav-number">14.2.</span> <span class="nav-text">[建议]避免为img添加不必要的title属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-为重要的图片添加alt属性"><span class="nav-number">14.3.</span> <span class="nav-text">[建议]为重要的图片添加alt属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-添加width和height属性，以避免页面抖动"><span class="nav-number">14.4.</span> <span class="nav-text">[建议]添加width和height属性，以避免页面抖动</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-有下载需求的图片采用img标签实现，无需下载的图片采用css背景图实现"><span class="nav-number">14.5.</span> <span class="nav-text">[建议]有下载需求的图片采用img标签实现，无需下载的图片采用css背景图实现</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-表单"><span class="nav-number">15.</span> <span class="nav-text">4.表单</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-1控件标题"><span class="nav-number">16.</span> <span class="nav-text">4.1控件标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-有文本标题的控件必须使用label标签将其与其标题相关联"><span class="nav-number">16.1.</span> <span class="nav-text">[强制]有文本标题的控件必须使用label标签将其与其标题相关联</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-2按钮"><span class="nav-number">17.</span> <span class="nav-text">4.2按钮</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#强制-使用button元素时必须指明type属性值"><span class="nav-number">17.1.</span> <span class="nav-text">[强制]使用button元素时必须指明type属性值</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-尽量不要使用按钮元素的name属性"><span class="nav-number">17.2.</span> <span class="nav-text">[建议]尽量不要使用按钮元素的name属性</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-3可访问性"><span class="nav-number">18.</span> <span class="nav-text">4.3可访问性</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-负责主要功能的按钮在DOM中的顺序应靠前"><span class="nav-number">18.1.</span> <span class="nav-text">[建议]负责主要功能的按钮在DOM中的顺序应靠前</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-当使用javascript进行表单提交时，如果条件允许，应使原生提交功能正常工作"><span class="nav-number">18.2.</span> <span class="nav-text">[建议]当使用javascript进行表单提交时，如果条件允许，应使原生提交功能正常工作</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-在针对移动设备开发的页面时，根据内容类型指定输入框的type属性"><span class="nav-number">18.3.</span> <span class="nav-text">[建议]在针对移动设备开发的页面时，根据内容类型指定输入框的type属性</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-多媒体"><span class="nav-number">19.</span> <span class="nav-text">5.多媒体</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-当在现代浏览器中使用audio以及video标签来播放音频视频时，应当注意格式"><span class="nav-number">19.1.</span> <span class="nav-text">[建议]当在现代浏览器中使用audio以及video标签来播放音频视频时，应当注意格式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-在支持HTML5的浏览器中优先使用audio和video标签来定义音频视频元素"><span class="nav-number">19.2.</span> <span class="nav-text">[建议]在支持HTML5的浏览器中优先使用audio和video标签来定义音频视频元素</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-只有在必要的时候开启音视频的自动播放"><span class="nav-number">19.3.</span> <span class="nav-text">[建议]只有在必要的时候开启音视频的自动播放</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-在object标签内部提供指示浏览器不支持该标签的说明"><span class="nav-number">19.4.</span> <span class="nav-text">[建议]在object标签内部提供指示浏览器不支持该标签的说明</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-模版中的HTML"><span class="nav-number">20.</span> <span class="nav-text">6.模版中的HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-模版代码的缩进优先保证HTML代码的缩进规则"><span class="nav-number">20.1.</span> <span class="nav-text">[建议]模版代码的缩进优先保证HTML代码的缩进规则</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#建议-模版代码应以保证HTML单个标签语法的正确性为基本原则"><span class="nav-number">20.2.</span> <span class="nav-text">[建议]模版代码应以保证HTML单个标签语法的正确性为基本原则</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            <div data-index="1" class="post-tab-item animated MinefadeInUp">
+                <div class="blog block post-sidebar-widget">
+    <img class="site-author-image" src="/images/avatar.gif">
+    <p class="site-author-name">Ckryo</p>
+    <p class="site-author-description">曾担任 微阿里（北京）科技有限公司 、微阿里（北京）品牌管理有限公司 CEO 、沈阳盾盾科技有限公司 创始人 之一， 曾从事过 VB，Andorid，PHP，Node，H5 项目开发，现主要从事Swift开发，从swift1.2开始使用swift代替其他语言进行完整的项目开发，精通IOS开发，拥有Mac软件开发经验，目前正在利用swift进行服务端开发...</p>
+    <!-- <div class="feed-link motion-element">
+                        <a href="/atom.xml" rel="alternate">
+                            <i class="fa fa-rss"></i> RSS
+                        </a>
+                    </div> -->
+    <nav class="site-state motion-element">
+        <div class="site-state-item site-state-posts">
+            <a href="/archives">
+                <!-- 计算文章 和 项目总数量 -->
+                
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">文章</span>
+            </a>
+        </div>
+        <div class="site-state-item site-state-categories">
+            <a href="/categories">
+	            <span class="site-state-item-count">0</span>
+	            <span class="site-state-item-name">项目</span>
+            </a>
+        </div>
+    </nav>
+</div>
+            </div>
         </div>
     </div>
+</div>
+<!-- / col-sm-4 col-md-3 -->
+<!-- / post sidebar area -->
+<script type="text/javascript">
+$(function() {
+    $('.post-tab-header').on('click', 'li', function() {
+        if ($(this).hasClass('active')) return;
+        $('.post-tab-header li').removeClass('active');
+        $('.post-tab-content .post-tab-item').removeClass('active');
+        $(this).addClass('active');
+        var index = $(this).data('index');
+        $('.post-tab-content').find('.post-tab-item[data-index=' + index + ']').addClass('active');
+    });
+});
+</script>
+        </div>
+        <!-- / row -->
+    </section>
+    <!-- / post content + sidebar -->
+</div>
 
-    <!-- js files -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/scale.fix.js"></script>
-    
-
-    
-
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript"> 
-        $(document).ready(function(){
-            MathJax.Hub.Config({ 
-                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
-            });
-        });
-    </script>
-
-
-    
-
-    <script src="/js/awesome-toc.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $.awesome_toc({
-                overlay: true,
-                contentId: "post-content",
-            });
-        });
-    </script>
-
-
-    
-    
-    <!--kill ie6 -->
-<!--[if IE 6]>
-  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
-<![endif]-->
-
+        <!-- / content -->
 </body>
+<!-- footer -->
+<footer>
+    <div class="container">
+        <p class="footer-info">© Made by Ckryo</p>
+    </div>
+    <!-- / container -->
+</footer>
+<!-- / footer -->
+<!-- portfolio -->
+<script src="/js/custom.js"></script>
+<script src="/js/jquery.shuffle.min.js"></script>
+<!-- lightbox -->
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<!-- / lightbox -->
+<!-- / portfolio -->
+<!-- preloader -->
+<script src="/js/preloader.js"></script>
+<!-- / preloader -->
+<!-- / javascript -->
+<script src="/js/jquery.lettering.js"></script>
+<script src="/js/jquery.textillate.js"></script>
+<script>
+$(function() {
+    $('#banner-title').textillate({
+        in: {
+            // set the effect name
+            effect: 'fadeInDown',
+            callback: function() {
+                $('#banner-description').css('display', 'block');
+                $('#banner-description').textillate();
+            }
+        },
+        // set the type of token to animate (available types: 'char' and 'word')
+        type: 'char'
+    });
+});
+</script>
 </html>

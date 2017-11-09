@@ -145,6 +145,221 @@
             <div class="blog block post-content-area">
                 
                 <div class="post-info-box">
+                    <a href="2017/11/09/hexo命令/"><h1>hexo命令</h1></a>
+                    <div class="post-meta">
+                      <span class="post-date">2017.11</span>
+                      <a href="#" class="post-author">
+                        
+                            -
+                        
+                      </a>
+                    </div>
+                    <div style="max-height: 350px; overflow: hidden; line-height: 24px">
+                        
+hexonpm install hexo -g #安装npm update hexo -g #升级hexo init #初始化
+简写hexo n “新建文章” =&gt; hexo new “新建文章” #新建文章hexo p =&gt; hexo publish #草稿发布hexo g =&gt; hexo generate #生成静态文件hexo s =&gt; hexo server #启动服务hexo d =&gt; hexo deploy #部署
+服务器hexo s #Hexo 会监视文件变动并自动更新，您无须重启服务器。hexo s -s #静态模式hexo -p 5000 #更改默认端口hexo s -i 192.168.0.1 #更改默认ip
+hexo clean #清除缓存
+hexo g –watch #监听文件变动
+模版hexo new “创建文章”hexo new page “创建页面”hexo generate #生成静态页面至pulic目录hexo server  #开启预览访问端口hexo deploy #将.deploy目录部署到GitHub
+
+
+                    </div>
+                    <div class="blog-post-footer">
+                        <a href="2017/11/09/hexo命令/" class="btn btn-primary-filled"><span>阅读全文</span><i class="fa fa-long-arrow-right"></i></a>
+                        <div class="pull-right">
+                            
+                                <a href="#" class="post-tag">学习笔记</a>
+                            
+                        </div>
+                    </div>
+                    <!-- / blog-post-footer -->
+                </div>
+                <!-- / post-info-box -->
+            </div>
+            <!-- / blog-block -->
+        </article>
+        <div class="space-50">&nbsp;</div>
+        <!-- / col-sm-8 col-md-9 -->
+    
+        <article class="post-item">
+            <div class="blog block post-content-area">
+                
+                <div class="post-info-box">
+                    <a href="2017/09/12/正则表达式/"><h1>正则表达式</h1></a>
+                    <div class="post-meta">
+                      <span class="post-date">2017.09</span>
+                      <a href="#" class="post-author">
+                        
+                            -
+                        
+                      </a>
+                    </div>
+                    <div style="max-height: 350px; overflow: hidden; line-height: 24px">
+                        点”.”
+可以匹配任何一个字符例：c.t意味匹配“以c开头，之后是任意一个字符，紧跟着是字母t”的字符串(不匹配ct或coot字符串)
+反斜杠’\’‘使用反斜杠’\’‘可以忽略y元字符，使得元字符的功能与普通字符一样;反斜杠本身也是一个元字符，这意味着反斜杠本身也可以通过相似的方法变回到普通字符的用途例：c\t表示匹配“以字符c 开头，然后是一个反斜杠，紧跟着是字母t“的字符串* 注意：在正则表达式实现中，.是不能用于匹配换行符的。“换行符”的表示方法在不同的实现中也不同。在实际编程中，参考相关文档
+字符类字符类是一组在方括号内的字符，表示可以匹配其中的任何一个字符。例：正则表达式c[aeiou]t，表示可以匹配的字符串是”以c开头，接着是ceiou中的任何一个字符，最后以t结尾”；正则表达式[0123456789]表示匹配任意一个整数；正则表达式[a]表示匹配单字符a；a表示匹配字符串[a],[[]\ab]表示匹配字符”[“或者”]”或者”a”,或者”b”；[[]]表示匹配字符”\”或者”[“,或者”]”;在字符类中，
+
+
+                    </div>
+                    <div class="blog-post-footer">
+                        <a href="2017/09/12/正则表达式/" class="btn btn-primary-filled"><span>阅读全文</span><i class="fa fa-long-arrow-right"></i></a>
+                        <div class="pull-right">
+                            
+                                <a href="#" class="post-tag">学习笔记</a>
+                            
+                        </div>
+                    </div>
+                    <!-- / blog-post-footer -->
+                </div>
+                <!-- / post-info-box -->
+            </div>
+            <!-- / blog-block -->
+        </article>
+        <div class="space-50">&nbsp;</div>
+        <!-- / col-sm-8 col-md-9 -->
+    
+        <article class="post-item">
+            <div class="blog block post-content-area">
+                
+                <div class="post-info-box">
+                    <a href="2017/08/28/日常问题/"><h1>日常问题</h1></a>
+                    <div class="post-meta">
+                      <span class="post-date">2017.08</span>
+                      <a href="#" class="post-author">
+                        
+                            -
+                        
+                      </a>
+                    </div>
+                    <div style="max-height: 350px; overflow: hidden; line-height: 24px">
+                        安卓微信浏览器location.reload()、window.location.href失效
+今天突然有测试找过来说页面跳转失败，看了一下，浏览器进度条加载完后，页面并没有跳转，还是停留在当前页面，因为其他页面都可以生效，而且还是一套代码，所有就没往跳转失效方面考虑，后来改了好久，各种方法都不生效，想着试试把window.location.href = baseUrl + ‘article/comment?v=’+Math.random();
+
+
+                    </div>
+                    <div class="blog-post-footer">
+                        <a href="2017/08/28/日常问题/" class="btn btn-primary-filled"><span>阅读全文</span><i class="fa fa-long-arrow-right"></i></a>
+                        <div class="pull-right">
+                            
+                                <a href="#" class="post-tag">开发bug</a>
+                            
+                        </div>
+                    </div>
+                    <!-- / blog-post-footer -->
+                </div>
+                <!-- / post-info-box -->
+            </div>
+            <!-- / blog-block -->
+        </article>
+        <div class="space-50">&nbsp;</div>
+        <!-- / col-sm-8 col-md-9 -->
+    
+        <article class="post-item">
+            <div class="blog block post-content-area">
+                
+                <div class="post-info-box">
+                    <a href="2017/08/28/web前端，美化效果/"><h1>web前端，美化效果</h1></a>
+                    <div class="post-meta">
+                      <span class="post-date">2017.08</span>
+                      <a href="#" class="post-author">
+                        
+                            -
+                        
+                      </a>
+                    </div>
+                    <div style="max-height: 350px; overflow: hidden; line-height: 24px">
+                        图片作为背景图
+任意一张图片，不需要调整图片尺寸，图片完全填充网页背景
+
+123456.page-bg&#123;    width:100%;    height:100%;    background:url(&apos;&apos;) no-repeat;    background-size:100% 100%;&#125;
+
+然后在HTML代码中将背景与其他想要显示的内容分为两个div来放置
+
+1234567891011121314151617181920&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    ......&lt;/head&gt;&lt;body&gt;    ......        &lt;!--父容器--&gt;        &lt;div class=&quot;father-div&quot;&gt;               &lt;!--放背景图片的容器--&gt;             &lt;div class=&quot;page-bg&quot;&gt;&lt;/div&gt;            &lt;!--要显示在背景图片之上的内容--&gt;            &lt;div class=&quot;page-context&quot;&gt;                ......            &lt;/div&gt;        &lt;/div&gt;    ......&lt;/body&gt;&lt;/html&gt;
+背景图虚化1234567.gauss &#123;    &lt;!-- blur(npx)n取值越大，模糊程度越大 --&gt;    -webkit-filter:blur(10px);    -moz-filter:blur(10px);    -ms-filter:blur(10px);    filter:blur(10px);&#125;
+
+在HTML代码中，要把背景图和实际内容分两个div来显示，如果虚化效果加父容器上，那么父容器以下所有内容，都会被虚化
+
+12345678910111213141516171819&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    ......&lt;/head&gt;&lt;body&gt;    ......        &lt;!--父容器--&gt;        &lt;div class=&quot;father-div&quot;&gt;               &lt;!--放背景图片带有虚化效果的容器--&gt;             &lt;div class=&quot;page-bg gauss&quot;&gt;&lt;/div&gt;            &lt;!--要显示在背景图片之上的内容--&gt;            &lt;div class=&quot;page-context glass&quot;&gt;                ......            &lt;/div&gt;        &lt;/div&gt;    ......&lt;/body&gt;&lt;/html&gt;
+透明效果123.glass &#123;    opacity:0.6;&#125;
+过渡动画1234567891011121314151617181920212223242526272829303132333435363738394041424344&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    ......    &lt;!--要使用jQuery效果，则要先加载了jQuery库!--&gt;    &lt;script type=&quot;text/javascript&quot; src=&quot;/scripts/jquery-1.7.2.min.js&quot;&gt;&lt;/script&gt;    &lt;script type=&quot;text/javascript&quot;&gt;        $(function()&#123;            var counter = 0;            var blur_max = 20;            var myTimer = setInterval(function()&#123;                var blur_css = &quot;blur(&quot; + counter + &quot;px)&quot;;                $(&quot;.blur&quot;).css(&quot;-webkit-filter&quot;, blur_css);                $(&quot;.blur&quot;).css(&quot;-moz-filter&quot;, blur_css);                $(&quot;.blur&quot;).css(&quot;-ms-filter&quot;, blur_css);                $(&quot;.blur&quot;).css(&quot;filter&quot;, blur_css);                                if (counter == blur_max)&#123;                    stopTimer();                &#125;                                counter++;            &#125;, 250);        &#125;);                function stopTimer()&#123;            clearInterval(myTimer);        &#125;    &lt;/script&gt;&lt;/head&gt;&lt;body&gt;    ......        &lt;!--父容器--&gt;        &lt;div class=&quot;father-div&quot;&gt;               &lt;!--放背景图片带有虚化效果的容器--&gt;             &lt;div class=&quot;page-bg blur&quot;&gt;&lt;/div&gt;            &lt;!--要显示在背景图片之上的内容--&gt;            &lt;div class=&quot;page-context glass&quot; id=&quot;fade_page&quot;&gt;                ......            &lt;/div&gt;        &lt;/div&gt;    ......&lt;/body&gt;&lt;/html&gt;
+
+                    </div>
+                    <div class="blog-post-footer">
+                        <a href="2017/08/28/web前端，美化效果/" class="btn btn-primary-filled"><span>阅读全文</span><i class="fa fa-long-arrow-right"></i></a>
+                        <div class="pull-right">
+                            
+                                <a href="#" class="post-tag">学习</a>
+                            
+                        </div>
+                    </div>
+                    <!-- / blog-post-footer -->
+                </div>
+                <!-- / post-info-box -->
+            </div>
+            <!-- / blog-block -->
+        </article>
+        <div class="space-50">&nbsp;</div>
+        <!-- / col-sm-8 col-md-9 -->
+    
+        <article class="post-item">
+            <div class="blog block post-content-area">
+                
+                <div class="post-info-box">
+                    <a href="2017/08/28/ES6/"><h1>ES6</h1></a>
+                    <div class="post-meta">
+                      <span class="post-date">2017.08</span>
+                      <a href="#" class="post-author">
+                        
+                            -
+                        
+                      </a>
+                    </div>
+                    <div style="max-height: 350px; overflow: hidden; line-height: 24px">
+                        
+识别整数
+123console.log(Number.isInteger(23))   //trueconsole.log(Number.isInteger(25.0))     //trueconsole.log(Number.isInteger(25.1))     //false
+
+安全整数IEEE754只能准确的表示-2的53次方到2的53次方的整数
+
+1234567let inside = Number.MAX_SAFE_INTEGER,    outside = Number.MAX_SAFE_INTEGER+1;console.log(Number.isInteger(inside));  //trueconsole.log(Number.isSafeInteger(inside));  //trueconsole.log(Number.isInteger(outside));     //trueconsole.log(Number.isSafeInteger(outside));     //false
+Unicode标识符
+可以将Unicode转义序列用作标识符
+
+123let \u0061 = &apos;abc&apos;;console.log(\u0061);    //abcconsole.log(a);     //abc
+
+可以将Unicode码位转义序列来作为标识符
+
+123ler \u&#123;61&#125; = &apos;abc&apos;;console.log(\u&#123;61&#125;);    //abcconsole.log(a);     //abc
+正式化proto属性
+只能在对象面量中指定一次proto，如果指定两个proto属性，则会抛出错误,这是唯一具有该限制的对面字面量可计算形式的[‘proto‘]行为类似于普通属性，不会设置或返回当前对象的原型，与对象字面量属性相关的所有规则均适用于此形式，应用不可计算的形式则会抛出异常使用proto和使用Object.getPrototypeOf()或Object.setPrototypeOf()方法的区别在于proto可直接设置对象字面量的类型
+
+123456789101112131415161718192021let person = &#123;    getGreeting() &#123;        return &apos;hello&apos;    &#125;&#125;let dog = &#123;    getCreeting() &#123;        return &apos;woof&apos;    &#125;&#125;let friend = &#123;    __protp__ : person&#125;console.log(friend.getGreeting());      //helloconsole.log(Object.getPrototypeOf(friend) === person)       //trueconsole.log(friend.__proto__ === person)        //truefriend.__proto__ = dog;console.log(friend.getGreeting());      //woofconsole.log(Object.getPrototypeOf(friend) === dog)      //trueconsole.log(frined.__proto__ === dog);      //true
+
+                    </div>
+                    <div class="blog-post-footer">
+                        <a href="2017/08/28/ES6/" class="btn btn-primary-filled"><span>阅读全文</span><i class="fa fa-long-arrow-right"></i></a>
+                        <div class="pull-right">
+                            
+                                <a href="#" class="post-tag">学习</a>
+                            
+                        </div>
+                    </div>
+                    <!-- / blog-post-footer -->
+                </div>
+                <!-- / post-info-box -->
+            </div>
+            <!-- / blog-block -->
+        </article>
+        <div class="space-50">&nbsp;</div>
+        <!-- / col-sm-8 col-md-9 -->
+    
+        <article class="post-item">
+            <div class="blog block post-content-area">
+                
+                <div class="post-info-box">
                     <a href="2017/08/25/react基础/"><h1>react基础</h1></a>
                     <div class="post-meta">
                       <span class="post-date">2017.08</span>
@@ -306,7 +521,7 @@ More info: Deployment
             <a href="/archives">
                 <!-- 计算文章 和 项目总数量 -->
                 
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">文章</span>
             </a>
         </div>

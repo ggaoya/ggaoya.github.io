@@ -239,41 +239,22 @@
                 <!-- post-block -->
                 <div class="col-sm-4">
                     <div class="post-block">
-                        <a href="2017/08/25/react基础/" class="post-preview" style="background-image: url(/images/post_preview_default.jpg)"></a>
+                        <a href="2017/11/09/hexo命令/" class="post-preview" style="background-image: url(/images/post_preview_default.jpg)"></a>
                         <div class="small-post-text">
-                            <h5><a href="2017/08/25/react基础/">react基础</a></h5>
+                            <h5><a href="2017/11/09/hexo命令/">hexo命令</a></h5>
                             <p class="small-post-meta">
-                                2017/08/25
-                            </p>
-                            <p class="space-bottom" style="max-height: 100px; overflow: hidden">
-                                创建react应用
-
-1234npm install -g create-react-appcreate-react-app my-appcd my-appnpm start
-构造方法 constructor
-可以通过this.state为该组件设置自身状态
-
-
-                            </p>
-                        </div>
-                        <!-- / small-post-text -->
-                    </div>
-                    <!-- / post-block -->
-                </div>
-                <!-- / col-md-4 -->
-                <!-- / post-block -->
-                
-                <!-- post-block -->
-                <div class="col-sm-4">
-                    <div class="post-block">
-                        <a href="2017/08/22/HTML代码规范/" class="post-preview" style="background-image: url(/images/post_preview_default.jpg)"></a>
-                        <div class="small-post-text">
-                            <h5><a href="2017/08/22/HTML代码规范/">HTML代码规范</a></h5>
-                            <p class="small-post-meta">
-                                2017/08/22
+                                2017/11/09
                             </p>
                             <p class="space-bottom" style="max-height: 100px; overflow: hidden">
                                 
-1.代码风格1.1缩紧与换行[强制]使用4个空格作为一个缩进层级，不允许使用2个空格或tab字符1.2命名[强制]class必须单词字母全小写，单词以-分割[强制]class必须代表相应模块或部件的内容或功能，不得以样式信息命名[强制]元素id必须保证页面唯一[强制]禁止为了hook脚本，无样式信息的class解释：不允许class只用于让javascript选择某些元素，class应具有明确的语意和样式，否则容易导致css class泛滥
+hexonpm install hexo -g #安装npm update hexo -g #升级hexo init #初始化
+简写hexo n “新建文章” =&gt; hexo new “新建文章” #新建文章hexo p =&gt; hexo publish #草稿发布hexo g =&gt; hexo generate #生成静态文件hexo s =&gt; hexo server #启动服务hexo d =&gt; hexo deploy #部署
+服务器hexo s #Hexo 会监视文件变动并自动更新，您无须重启服务器。hexo s -s #静态模式hexo -p 5000 #更改默认端口hexo s -i 192.168.0.1 #更改默认ip
+hexo clean #清除缓存
+hexo g –watch #监听文件变动
+模版hexo new “创建文章”hexo new page “创建页面”hexo generate #生成静态页面至pulic目录hexo server  #开启预览访问端口hexo deploy #将.deploy目录部署到GitHub
+
+
                             </p>
                         </div>
                         <!-- / small-post-text -->
@@ -286,14 +267,42 @@
                 <!-- post-block -->
                 <div class="col-sm-4">
                     <div class="post-block">
-                        <a href="2017/08/21/手机端页面设置/" class="post-preview" style="background-image: url(/images/post_preview_default.jpg)"></a>
+                        <a href="2017/09/12/正则表达式/" class="post-preview" style="background-image: url(/images/post_preview_default.jpg)"></a>
                         <div class="small-post-text">
-                            <h5><a href="2017/08/21/手机端页面设置/">手机端页面设置</a></h5>
+                            <h5><a href="2017/09/12/正则表达式/">正则表达式</a></h5>
                             <p class="small-post-meta">
-                                2017/08/21
+                                2017/09/12
                             </p>
                             <p class="space-bottom" style="max-height: 100px; overflow: hidden">
-                                html页面结构&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; /&gt;width 设置viewport宽度，为一个正整数或字符串device-widthheight 设置viewport高度,一般设置了宽度会自动解析出高度，可以不设置initial-scale 默认缩放比例，为数字，可以带小数minimum-scale 允许用户最小缩放比例，可以带小数maximum-scale 允许用户最大缩放比例，可以带小数
+                                点”.”
+可以匹配任何一个字符例：c.t意味匹配“以c开头，之后是任意一个字符，紧跟着是字母t”的字符串(不匹配ct或coot字符串)
+反斜杠’\’‘使用反斜杠’\’‘可以忽略y元字符，使得元字符的功能与普通字符一样;反斜杠本身也是一个元字符，这意味着反斜杠本身也可以通过相似的方法变回到普通字符的用途例：c\t表示匹配“以字符c 开头，然后是一个反斜杠，紧跟着是字母t“的字符串* 注意：在正则表达式实现中，.是不能用于匹配换行符的。“换行符”的表示方法在不同的实现中也不同。在实际编程中，参考相关文档
+字符类字符类是一组在方括号内的字符，表示可以匹配其中的任何一个字符。例：正则表达式c[aeiou]t，表示可以匹配的字符串是”以c开头，接着是ceiou中的任何一个字符，最后以t结尾”；正则表达式[0123456789]表示匹配任意一个整数；正则表达式[a]表示匹配单字符a；a表示匹配字符串[a],[[]\ab]表示匹配字符”[“或者”]”或者”a”,或者”b”；[[]]表示匹配字符”\”或者”[“,或者”]”;在字符类中，
+
+
+                            </p>
+                        </div>
+                        <!-- / small-post-text -->
+                    </div>
+                    <!-- / post-block -->
+                </div>
+                <!-- / col-md-4 -->
+                <!-- / post-block -->
+                
+                <!-- post-block -->
+                <div class="col-sm-4">
+                    <div class="post-block">
+                        <a href="2017/08/28/日常问题/" class="post-preview" style="background-image: url(/images/post_preview_default.jpg)"></a>
+                        <div class="small-post-text">
+                            <h5><a href="2017/08/28/日常问题/">日常问题</a></h5>
+                            <p class="small-post-meta">
+                                2017/08/28
+                            </p>
+                            <p class="space-bottom" style="max-height: 100px; overflow: hidden">
+                                安卓微信浏览器location.reload()、window.location.href失效
+今天突然有测试找过来说页面跳转失败，看了一下，浏览器进度条加载完后，页面并没有跳转，还是停留在当前页面，因为其他页面都可以生效，而且还是一套代码，所有就没往跳转失效方面考虑，后来改了好久，各种方法都不生效，想着试试把window.location.href = baseUrl + ‘article/comment?v=’+Math.random();
+
+
                             </p>
                         </div>
                         <!-- / small-post-text -->

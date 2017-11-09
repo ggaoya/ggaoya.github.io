@@ -140,11 +140,11 @@
                 <div class="blog block post-content-area">
                     <img src="/images/post_preview_default.jpg" alt="">
                     <div class="post-info-box">
-                        <h1 style="font-size: 48px;">Hello World</h1>
+                        <h1 style="font-size: 48px;">ES6</h1>
                         <p class="post-info" style="margin-bottom: 15px;">
                             发表于:
                             <span style="color: #aaa; margin: 0 15px">
-                                2017.08.16
+                                2017.08.28
                             </span>
                              | 分类：
                              <a href="#" style="margin: 0 5px">
@@ -154,15 +154,25 @@
                              </a>
                              
                         </p>
-                        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+                        <blockquote>
+<h5 id="识别整数"><a href="#识别整数" class="headerlink" title="识别整数"></a>识别整数</h5></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">console.log(Number.isInteger(23))   //true</div><div class="line">console.log(Number.isInteger(25.0))     //true</div><div class="line">console.log(Number.isInteger(25.1))     //false</div></pre></td></tr></table></figure>
+<blockquote>
+<h5 id="安全整数"><a href="#安全整数" class="headerlink" title="安全整数"></a>安全整数</h5><p>IEEE754只能准确的表示-2的53次方到2的53次方的整数</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let inside = Number.MAX_SAFE_INTEGER,</div><div class="line">    outside = Number.MAX_SAFE_INTEGER+1;</div><div class="line">console.log(Number.isInteger(inside));  //true</div><div class="line">console.log(Number.isSafeInteger(inside));  //true</div><div class="line"></div><div class="line">console.log(Number.isInteger(outside));     //true</div><div class="line">console.log(Number.isSafeInteger(outside));     //false</div></pre></td></tr></table></figure>
+<h5 id="Unicode标识符"><a href="#Unicode标识符" class="headerlink" title="Unicode标识符"></a>Unicode标识符</h5><blockquote>
+<p>可以将Unicode转义序列用作标识符</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let \u0061 = &apos;abc&apos;;</div><div class="line">console.log(\u0061);    //abc</div><div class="line">console.log(a);     //abc</div></pre></td></tr></table></figure>
+<blockquote>
+<p>可以将Unicode码位转义序列来作为标识符</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ler \u&#123;61&#125; = &apos;abc&apos;;</div><div class="line">console.log(\u&#123;61&#125;);    //abc</div><div class="line">console.log(a);     //abc</div></pre></td></tr></table></figure>
+<h5 id="正式化proto属性"><a href="#正式化proto属性" class="headerlink" title="正式化proto属性"></a>正式化<strong>proto</strong>属性</h5><blockquote>
+<p>只能在对象面量中指定一次<strong>proto</strong>，如果指定两个<strong>proto</strong>属性，则会抛出错误,这是唯一具有该限制的对面字面量<br>可计算形式的[‘<strong>proto</strong>‘]行为类似于普通属性，不会设置或返回当前对象的原型，与对象字面量属性相关的所有规则均适用于此形式，应用不可计算的形式则会抛出异常<br>使用<strong>proto</strong>和使用Object.getPrototypeOf()或Object.setPrototypeOf()方法的区别在于<strong>proto</strong>可直接设置对象字面量的类型</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">let person = &#123;</div><div class="line">    getGreeting() &#123;</div><div class="line">        return &apos;hello&apos;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let dog = &#123;</div><div class="line">    getCreeting() &#123;</div><div class="line">        return &apos;woof&apos;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">let friend = &#123;</div><div class="line">    __protp__ : person</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(friend.getGreeting());      //hello</div><div class="line">console.log(Object.getPrototypeOf(friend) === person)       //true</div><div class="line">console.log(friend.__proto__ === person)        //true</div><div class="line">friend.__proto__ = dog;</div><div class="line">console.log(friend.getGreeting());      //woof</div><div class="line">console.log(Object.getPrototypeOf(friend) === dog)      //true</div><div class="line">console.log(frined.__proto__ === dog);      //true</div></pre></td></tr></table></figure>
 
                     </div>
                     <!-- / post-info-box -->
@@ -350,7 +360,7 @@ li {
         <div class="post-tab-content">
             <div id="post-scroll-spy" data-index="0" class="active post-tab-item animated MinefadeInUp">
                 <div class="post-toc">
-                    <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#识别整数"><span class="nav-number">1.</span> <span class="nav-text">识别整数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安全整数"><span class="nav-number">2.</span> <span class="nav-text">安全整数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Unicode标识符"><span class="nav-number">3.</span> <span class="nav-text">Unicode标识符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#正式化proto属性"><span class="nav-number">4.</span> <span class="nav-text">正式化proto属性</span></a></li></ol>
                 </div>
             </div>
             <div data-index="1" class="post-tab-item animated MinefadeInUp">
